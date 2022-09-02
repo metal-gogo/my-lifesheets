@@ -191,7 +191,8 @@
 			"settings": {
 				"expression": "hours(duration)",
 				"visible": "false"
-			}
+			},
+			"name": "duration_in_hours"
 		}
 	],
 	"root": [
