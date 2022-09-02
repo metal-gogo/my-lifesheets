@@ -24,5 +24,18 @@
 		"storage": "",
 		"charts_placement": "",
 		"entries_name": "Hours workeds"
+	},
+	"mood-tracker": {
+		"name": "Mood tracker",
+		"slug": "mood-tracker",
+		"entry_name": "entry",
+		"description": "entry tracker",
+		"private": false,
+		"icon": "😀",
+		"color": "#0cc4e9",
+		"storageType": "",
+		"storage": "",
+		"charts_placement": "",
+		"entries_name": "entries"
 	}
 }
