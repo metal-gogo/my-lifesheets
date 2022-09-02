@@ -11,5 +11,18 @@
 		"storage": "",
 		"charts_placement": "",
 		"entries_name": "Cigarrettes smoked"
+	},
+	"work-time-tracker": {
+		"name": "Work time tracker",
+		"slug": "work-time-tracker",
+		"entry_name": "Hours worked",
+		"description": "Hours worked tracker",
+		"private": false,
+		"icon": "😀",
+		"color": "#ee3f3f",
+		"storageType": "",
+		"storage": "",
+		"charts_placement": "",
+		"entries_name": "Hours workeds"
 	}
 }
