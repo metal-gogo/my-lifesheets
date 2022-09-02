@@ -100,8 +100,8 @@
 			"type": "action",
 			"scope": "root",
 			"settings": {
-				"target_preset": "new",
-				"target": "add(entry)",
+				"target_preset": "last",
+				"target": "last(entry)",
 				"set_pairs": [
 					{
 						"name": "cigarretes_smoked",
