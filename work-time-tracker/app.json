@@ -106,14 +106,50 @@
 			"settings": {}
 		},
 		{
+			"type": "expression",
+			"scope": "entry",
+			"flags": [
+				"temporal",
+				"deletable"
+			],
+			"settings": {
+				"visible": "[end_date and (time and end_time)]",
+				"prefix": "(",
+				"suffix": ")",
+				"expression": "duration(duration, 2)"
+			},
+			"name": "duration_readable"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "if(Project = \"Personal\", 0, 50)",
+				"visible": "false"
+			},
+			"name": "hourly_rate"
+		},
+		{
 			"type": "property",
 			"scope": "entry",
 			"settings": {
 				"type": "options",
 				"options": "Personal, Breeze, Synergy, Quest",
-				"default": "[Personal]"
+				"default": "[Personal]",
+				"appearance": "line"
 			},
 			"name": "Project"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "hours(duration)*money_earned",
+				"prefix": "Money earned $",
+				"appearance": "line",
+				"visible": "[if(project == \"Personal\")]"
+			},
+			"name": "money_earned"
 		},
 		{
 			"type": "expression",
@@ -138,21 +174,6 @@
 				"expression": "end_date_time - date_time"
 			},
 			"name": "duration"
-		},
-		{
-			"type": "expression",
-			"scope": "entry",
-			"flags": [
-				"temporal",
-				"deletable"
-			],
-			"settings": {
-				"visible": "[end_date and (time and end_time)]",
-				"prefix": "(",
-				"suffix": ")",
-				"expression": "duration(duration, 2)"
-			},
-			"name": "duration_readable"
 		},
 		{
 			"type": "property",
