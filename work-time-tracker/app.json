@@ -144,10 +144,10 @@
 			"type": "expression",
 			"scope": "entry",
 			"settings": {
-				"expression": "hours(duration)*money_earned",
+				"expression": "hours(duration)*hourly_rate",
 				"prefix": "Money earned $",
 				"appearance": "line",
-				"visible": "[if(project == \"Personal\")]"
+				"visible": "[if(Project != \"Personal\")]"
 			},
 			"name": "money_earned"
 		},
