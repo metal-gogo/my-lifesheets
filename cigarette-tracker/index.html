@@ -41,7 +41,7 @@
 					<th hc-name="b">Sum of cigarretes_smoked</th>
 				</tr>
 			</thead>
-			<tbody mv-list="chart8" mv-value="groupBy(cigarretes_smoked, readable_datetime(entry.date, 'day'))">
+			<tbody mv-list="chart9" mv-value="groupBy(cigarretes_smoked, readable_datetime(entry.date, 'day'))">
 				<tr mv-list-item mv-group>
 					<td>[$value]</td>
 					<td>[sum($items)]</td>
@@ -54,7 +54,7 @@
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Cigarrete smoked</button>
-				<button data-type="action" mv-action="add(cigarretes_smoked: 2, entry)">+ Add two cigarrettes</button>
+				<button data-type="action" mv-action="set(last(entry), cigarretes_smoked: 2)">+ Add two cigarrettes</button>
 			</div>
 			<span property="time_since_last_cigarrete" data-type="expression" data-prefix="Time since last cigarrette:" mv-value="duration($now - last(date_time))" class="appearance-line" style="color: #22252a"></span>
 		<section mv-list="entry">
