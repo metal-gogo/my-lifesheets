@@ -199,7 +199,25 @@
 				"set_pairs": [],
 				"filter_pairs": []
 			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"expression": "sum(money_earned)",
+				"prefix": "Money earned to date: $"
+			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"aggregate": "sum",
+				"aggregate_of": "money_earned",
+				"group_by": "Project"
+			}
+		}
+	]
 }
