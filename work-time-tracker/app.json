@@ -184,6 +184,14 @@
 				"multiline": true
 			},
 			"name": "notes"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "hours(duration)",
+				"visible": "false"
+			}
 		}
 	],
 	"root": [
@@ -217,6 +225,16 @@
 				"aggregate": "sum",
 				"aggregate_of": "money_earned",
 				"group_by": "Project"
+			}
+		},
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"aggregate": "sum",
+				"aggregate_of": "duration",
+				"group_by": "Project",
+				"type": "table"
 			}
 		}
 	]
