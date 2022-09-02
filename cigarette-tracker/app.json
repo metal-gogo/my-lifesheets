@@ -97,19 +97,6 @@
 			}
 		},
 		{
-			"type": "expression",
-			"scope": "root",
-			"settings": {
-				"expression": "duration($now - last(date_time))",
-				"prefix": "Time since last cigarrette:",
-				"formatting": [],
-				"visible": "",
-				"appearance": "line",
-				"text_color": "#22252a"
-			},
-			"name": "time_since_last_cigarrete"
-		},
-		{
 			"type": "action",
 			"scope": "root",
 			"settings": {
@@ -124,6 +111,19 @@
 				"filter_pairs": [],
 				"label": "+ Add two cigarrettes"
 			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"expression": "duration($now - last(date_time))",
+				"prefix": "Time since last cigarrette:",
+				"formatting": [],
+				"visible": "",
+				"appearance": "line",
+				"text_color": "#22252a"
+			},
+			"name": "time_since_last_cigarrete"
 		}
 	],
 	"charts": [
