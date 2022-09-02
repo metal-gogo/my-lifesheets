@@ -1,3 +1,3 @@
 # My lifesheets
 
-- [🚬 Cigarette Tracker](cigarette-tracker): Cigarrete smoked tracker
+- [🚬 Cigarette Tracker](cigarette-tracker): Cigarrette smoked tracker
