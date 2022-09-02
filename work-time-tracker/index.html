@@ -45,11 +45,15 @@
 					<time property="end_time" data-type="property" data-prefix=" to " data-show="[process_visible(time)]" mv-edit-type="inline" mv-editor-type="time" class="type-time"></time>
 					<time property="end_date" data-type="property" data-prefix=" on " data-show="[process_visible(if(time and end_time, if(end_date = date, 'edit', true), false))]" mv-default="[if(end_time, if(end_time < time, date(date + 1 * days()), date))]" mv-edit-type="inline" mv-editor-type="date" mv-editor-min="[date]" class="type-date"></time>
 					<span data-type="spacer" class="appearance-stretch"></span>
-					<span property="Project" data-type="property" mv-default="[Personal]" mv-options="Personal, Breeze, Synergy, Quest" class="type-options"></span>
+					<span property="duration_readable" data-type="expression" data-prefix="(" data-suffix=")" data-show="[process_visible(end_date and (time and end_time))]" mv-value="duration(duration, 2)"></span>
+					<span property="hourly_rate" data-type="expression" data-show="false" mv-value="if(Project = &quot;Personal&quot;, 0, 50)"></span>
+				</header>
+				<span property="Project" data-type="property" mv-default="[Personal]" mv-options="Personal, Breeze, Synergy, Quest" class="appearance-line type-options"></span>
+				<span property="money_earned" data-type="expression" data-prefix="Money earned $" data-show="[process_visible(if(project == &quot;Personal&quot;))]" mv-value="hours(duration)*money_earned" class="appearance-line"></span>
+				<div class="field-row">
 					<span property="end_date_time" data-type="expression" data-show="false" mv-value="datetime(end_date, end_time)"></span>
 					<span property="duration" data-type="expression" data-show="false" mv-value="end_date_time - date_time"></span>
-					<span property="duration_readable" data-type="expression" data-prefix="(" data-suffix=")" data-show="[process_visible(end_date and (time and end_time))]" mv-value="duration(duration, 2)"></span>
-				</header>
+				</div>
 				<div property="notes" data-type="property" class="appearance-line type-text"></div>
 			</article>
 		</section>
