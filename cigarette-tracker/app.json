@@ -97,5 +97,17 @@
 			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"type": "bar",
+				"orientation": "horizontal",
+				"group_by": "day",
+				"aggregate_of": "cigarretes_smoked",
+				"aggregate": "sum"
+			}
+		}
+	]
 }
