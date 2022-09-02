@@ -2,15 +2,15 @@
 	"app": {
 		"name": "Cigarette Tracker",
 		"slug": "cigarette-tracker",
-		"entry_name": "Cigarrete smoked",
-		"description": "Cigarrete smoked tracker",
+		"entry_name": "Cigarrette smoked",
+		"description": "Cigarrette smoked tracker",
 		"private": false,
 		"icon": "🚬",
 		"color": "#969696",
 		"storageType": "",
 		"storage": "",
 		"charts_placement": "",
-		"entries_name": "Cigarretes smoked"
+		"entries_name": "Cigarrettes smoked"
 	},
 	"temporal": {
 		"times": "yes",
@@ -94,6 +94,35 @@
 				"appearance": "",
 				"set_pairs": [],
 				"filter_pairs": []
+			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"expression": "duration($now - last(date_time))",
+				"prefix": "Time since last cigarrette:",
+				"formatting": [],
+				"visible": "",
+				"appearance": "line",
+				"text_color": "#22252a"
+			},
+			"name": "time_since_last_cigarrete"
+		},
+		{
+			"type": "action",
+			"scope": "root",
+			"settings": {
+				"target_preset": "new",
+				"target": "add(entry)",
+				"set_pairs": [
+					{
+						"name": "cigarretes_smoked",
+						"value": "2"
+					}
+				],
+				"filter_pairs": [],
+				"label": "+ Add two cigarrettes"
 			}
 		}
 	],
