@@ -20,12 +20,6 @@
 			"end_time": "04:17",
 			"end_date": "2022-08-31",
 			"Project": "Synergy"
-		},
-		{
-			"date": "2022-09-02",
-			"time": "12:00",
-			"end_date": "[if(end_time, if(end_time < time, date(date + 1 * days()), date))]",
-			"Project": "Personal"
 		}
 	]
 }
