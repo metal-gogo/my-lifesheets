@@ -54,11 +54,9 @@
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Cigarrete smoked</button>
-			</div>
-			<span property="time_since_last_cigarrete" data-type="expression" data-prefix="Time since last cigarrette:" mv-value="duration($now - last(date_time))" class="appearance-line" style="color: #22252a"></span>
-			<div class="field-row">
 				<button data-type="action" mv-action="add(cigarretes_smoked: 2, entry)">+ Add two cigarrettes</button>
 			</div>
+			<span property="time_since_last_cigarrete" data-type="expression" data-prefix="Time since last cigarrette:" mv-value="duration($now - last(date_time))" class="appearance-line" style="color: #22252a"></span>
 		<section mv-list="entry">
 			<article mv-list-item class="entry">
 				<header class="field-row">
