@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title>Cigarette Tracker: Cigarrete smoked tracker</title>
+	<title>Cigarette Tracker: Cigarrette smoked tracker</title>
 	<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text style="font-size: 80px" x="50%" y=".85em" dominant-baseline="middle" text-anchor="middle">🚬</text></svg>'>
 	<link rel="stylesheet" href="https://get.mavo.io/mavo.css">
 	<link rel="stylesheet" href="../style.css">
@@ -24,7 +24,7 @@
 			<span class="app-icon">🚬</span>
 			<span class="app-name">Cigarette Tracker</span>
 		</h1>
-		<h2>Cigarrete smoked tracker</h2>
+		<h2>Cigarrette smoked tracker</h2>
 		<div class="mv-bar mv-ui"><a href="#entries" class="mv-button custom entries">Entries</a></div>
 	</header>
 
@@ -54,6 +54,10 @@
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Cigarrete smoked</button>
+			</div>
+			<span property="time_since_last_cigarrete" data-type="expression" data-prefix="Time since last cigarrette:" mv-value="duration($now - last(date_time))" class="appearance-line" style="color: #22252a"></span>
+			<div class="field-row">
+				<button data-type="action" mv-action="add(cigarretes_smoked: 2, entry)">+ Add two cigarrettes</button>
 			</div>
 		<section mv-list="entry">
 			<article mv-list-item class="entry">
