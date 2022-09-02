@@ -2,14 +2,14 @@
 	"cigarette-tracker": {
 		"name": "Cigarette Tracker",
 		"slug": "cigarette-tracker",
-		"entry_name": "Cigarrete smoked",
-		"description": "Cigarrete smoked tracker",
+		"entry_name": "Cigarrette smoked",
+		"description": "Cigarrette smoked tracker",
 		"private": false,
 		"icon": "🚬",
 		"color": "#969696",
 		"storageType": "",
 		"storage": "",
 		"charts_placement": "",
-		"entries_name": "Cigarretes smoked"
+		"entries_name": "Cigarrettes smoked"
 	}
 }
